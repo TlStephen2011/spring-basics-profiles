@@ -25,7 +25,7 @@ In order to switch the profiles, you need to add the following to the applicatio
   spring.profiles.active=SecondaryGreeting # or whatever name
 ```
 
-You may also notice that the @Service annotation has specified a name for each service. In this example, both greeting services have different names, however, test them out with the same name. You will notice that Spring does not complain, because only 1 of them is being added to the container and injected into the GreetingController therefore Spring can only inject one. 
+You may also notice that the @Service annotation has specified a name for each service. In this example, both greeting services have different names, however, test them out with the same name. You will notice that Spring does not complain, because only 1 of them is being added to the container and injected into the GreetingController.
 
 However, let's say we weren't using profiles, how would Spring know which service to inject into the GreetingController? Well, we would need to use the @Qualifier annotation to specify which implementation we wanted.
 
